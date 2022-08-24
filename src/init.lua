@@ -1,5 +1,3 @@
-debug.debug()
-
 require( "iuplua" )
 
 img1 = iup.image

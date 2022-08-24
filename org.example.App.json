@@ -52,7 +52,7 @@
             "sources": [
                 {
                     "type": "file",
-                    "path": "iup-3.30_Linux54_64_lib.tar.gz",
+                    "url": "https://sourceforge.net/projects/iup/files/3.30/Linux%20Libraries/iup-3.30_Linux54_64_lib.tar.gz",
                     "sha256": "7f97b70f8bbf1a59f6b3dd002a381eebacd51855b28dac69f95c9a3d90cbd65a"
                 },
                 {
@@ -73,7 +73,7 @@
             "sources": [
                 {
                     "type": "file",
-                    "path": "iup-3.30-Lua54_Linux54_64_lib.tar.gz",
+                    "url": "https://sourceforge.net/projects/iup/files/3.30/Linux%20Libraries/Lua54/iup-3.30-Lua54_Linux54_64_lib.tar.gz",
                     "sha256": "dfed42a9d7957e57a3dc65d2d6728b741f4bb1af4fb5a714134e8ea22991f766"
                 },
                 {
