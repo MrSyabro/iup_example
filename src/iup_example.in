@@ -1,0 +1,34 @@
+#!@LUA@
+CONFIG = {
+  name = "@NAME@",
+  version = "@VERSION@",
+  dirs = {
+  	lib = "@libdir@",
+  	data = "@datadir@",
+  	module = "@moduledir@",
+  	pkg = "@pkgdatadir@",
+  },
+  resfile = "@pkgdatadir@/@NAME@.gresource",
+}
+
+package.path = table.concat({
+	CONFIG.dirs.module .. "/?.lua",
+	CONFIG.dirs.module .. "/?/init.lua",
+	CONFIG.dirs.lib .. "/lua/5.4/?.lua",
+	CONFIG.dirs.lib .. "/lua/5.4/?/init.lua",
+	package.path
+}, ";")
+package.cpath = table.concat({
+	CONFIG.dirs.lib .. "/lua/5.4/lib?54.so",
+	CONFIG.dirs.lib .. "/lua/5.4/lib?.so",
+	CONFIG.dirs.lib .. "/lib?54.so",
+	CONFIG.dirs.lib .. "/lib?.so",
+	package.cpatch
+}, ";")
+
+assert(loadfile(
+	CONFIG.dirs.module .. "/init.lua", 
+	"tb", setmetatable({
+		CONFIG = CONFIG,
+	},
+{__index = _G})))()
